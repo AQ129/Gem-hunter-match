@@ -82,6 +82,12 @@ public class GemBonusUI : MonoBehaviour
         CheckItemCanUse();
     }
 
+    private void OnDisable()
+    {
+        UiManager.OnGemBonusChanged -= UiManager_OnGemBonusChanged;
+        Board.Instance.UpdateBonusItem -= BoardUpdateBonusItem;
+    }
+
     private void BoardUpdateBonusItem(GemType obj)
     {
         ResetAll();

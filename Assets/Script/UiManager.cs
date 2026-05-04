@@ -77,6 +77,11 @@ public class UiManager : MonoBehaviour
         StartCoroutine(Fade(1, 0));
     }
 
+    private void OnDisable()
+    {
+        Board.Instance.OnGameEnding -= OnGameEnding;
+    }
+
     private void OnShopOn()
     {
         shop.SetActive(true);

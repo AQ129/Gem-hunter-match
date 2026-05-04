@@ -23,7 +23,7 @@ public class MovesLeftUi : MonoBehaviour
         
     }
 
-    private void OnDestroy()
+    private void OnDisable()
     {
         Board.Instance.OnMovesChanged -= UpdateMovesLeftUi;
     }

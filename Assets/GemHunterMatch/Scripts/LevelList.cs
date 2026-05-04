@@ -120,12 +120,12 @@ namespace Match3
 
                 if (levelListChanged || buildListChange)
                 {
-                    EditorBuildSettings.scenes = buildLevels;
-                    EditorUtility.DisplayDialog("Build Stopped",
-                        "The scene list from the build had to be changed to match the list in the LevelList assets.\n" +
-                        "the scene list have now been fixed, Please restart the build.", "OK");
+                    //EditorBuildSettings.scenes = buildLevels;
+                    //EditorUtility.DisplayDialog("Build Stopped",
+                    //    "The scene list from the build had to be changed to match the list in the LevelList assets.\n" +
+                    //    "the scene list have now been fixed, Please restart the build.", "OK");
 
-                    throw new BuildFailedException("Level List had to be rebuilt, restart the build");
+                    //throw new BuildFailedException("Level List had to be rebuilt, restart the build");
                 }
             }
             catch (Exception e)

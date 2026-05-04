@@ -37,6 +37,11 @@ public class GoalUiManager : MonoBehaviour
         UpdateTarget(obj);
     }
 
+    private void OnDisable()
+    {
+        Board.Instance.OnGemDestroyed -= UpdataeGoalUi;
+    }
+
     // Update is called once per frame
     void Update()
     {
